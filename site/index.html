@@ -106,6 +106,27 @@
     .craft .ph { aspect-ratio: 4 / 3; }
   }
 
+  /* Final product */
+  .result { margin-top: clamp(4.5rem, 9vw, 7rem); }
+  .result-head { max-width: 640px; }
+  .result-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1.4rem;
+    margin-top: 2.6rem;
+  }
+  .result-grid figure { margin: 0; display: flex; flex-direction: column; min-height: 0; }
+  .result-grid img { flex: 1; min-height: 0; aspect-ratio: auto; }
+  .result-main { grid-row: span 2; }
+  .result-main img { aspect-ratio: 840 / 530; }
+  .result-grid figure:not(.result-main) img { aspect-ratio: 16 / 9; }
+  .result-grid figcaption { margin-top: .7rem; font-size: .95rem; color: var(--soft); }
+  @media (max-width: 760px) {
+    .result-grid { grid-template-columns: 1fr; grid-template-rows: none; }
+    .result-main { grid-row: auto; }
+  }
+
   /* Flavors: alternating rows */
   .flavors-head { text-align: center; max-width: 620px; margin-inline: auto; }
   .flavors-head .lede { margin-inline: auto; }
@@ -212,6 +233,28 @@
             <p>Al final se espolvorea matcha. Le da su color verde y un final suave y fresco.</p>
           </figcaption>
         </figure>
+      </div>
+
+      <div class="result">
+        <div class="result-head reveal">
+          <span class="hand">el resultado</span>
+          <h2>Listos para <em>disfrutar</em></h2>
+          <p class="lede">Así lucen al terminar: frutos cubiertos de chocolate y vestidos de matcha.</p>
+        </div>
+        <div class="result-grid">
+          <figure class="result-main reveal">
+            <img src="img/final-fresa.webp" alt="Fresas cubiertas de chocolate blanco y polvo de matcha junto a trozos de chocolate blanco" width="840" height="530" loading="lazy">
+            <figcaption>Fresa con chocolate blanco y matcha</figcaption>
+          </figure>
+          <figure class="reveal">
+            <img src="img/final-almendra.webp" alt="Almendras cubiertas de chocolate con leche sobre polvo de matcha" width="570" height="288" loading="lazy">
+            <figcaption>Almendra con chocolate con leche y matcha</figcaption>
+          </figure>
+          <figure class="reveal">
+            <img src="img/final-arandano.webp" alt="Arándanos cubiertos de chocolate blanco y matcha" width="448" height="300" loading="lazy">
+            <figcaption>Arándano con chocolate blanco y matcha</figcaption>
+          </figure>
+        </div>
       </div>
     </div>
   </section>
