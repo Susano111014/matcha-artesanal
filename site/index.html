@@ -119,12 +119,14 @@
   .result-grid figure { margin: 0; display: flex; flex-direction: column; min-height: 0; }
   .result-grid img { flex: 1; min-height: 0; aspect-ratio: auto; }
   .result-main { grid-row: span 2; }
-  .result-main img { aspect-ratio: 840 / 530; }
+  .result-main img { aspect-ratio: 1260 / 795; }
   .result-grid figure:not(.result-main) img { aspect-ratio: 16 / 9; }
   .result-grid figcaption { margin-top: .7rem; font-size: .95rem; color: var(--soft); }
   @media (max-width: 760px) {
-    .result-grid { grid-template-columns: 1fr; grid-template-rows: none; }
-    .result-main { grid-row: auto; }
+    .result-grid { grid-template-columns: 1fr 1fr; grid-template-rows: none; gap: 1rem; }
+    .result-main { grid-row: auto; grid-column: 1 / -1; }
+    .result-grid figure:not(.result-main) img { aspect-ratio: 4 / 3; }
+    .result-grid figcaption { font-size: .85rem; line-height: 1.4; }
   }
 
   /* Flavors: alternating rows */
@@ -243,11 +245,11 @@
         </div>
         <div class="result-grid">
           <figure class="result-main reveal">
-            <img src="img/final-fresa.webp" alt="Fresas cubiertas de chocolate blanco y polvo de matcha junto a trozos de chocolate blanco" width="840" height="530" loading="lazy">
+            <img src="img/final-fresa.webp" alt="Fresas cubiertas de chocolate blanco y polvo de matcha junto a trozos de chocolate blanco" width="1260" height="795" loading="lazy">
             <figcaption>Fresa con chocolate blanco y matcha</figcaption>
           </figure>
           <figure class="reveal">
-            <img src="img/final-almendra.webp" alt="Almendras cubiertas de chocolate con leche sobre polvo de matcha" width="570" height="288" loading="lazy">
+            <img src="img/final-almendra.webp" alt="Almendras cubiertas de chocolate con leche sobre polvo de matcha" width="760" height="384" loading="lazy">
             <figcaption>Almendra con chocolate con leche y matcha</figcaption>
           </figure>
           <figure class="reveal">
